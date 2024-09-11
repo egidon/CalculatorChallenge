@@ -175,24 +175,24 @@ namespace ConsoleApp2
         }
 
         //// 8. Support multiple delimiters of any length ([*][!!][r9r])
-        //public int Add_multiple_numbers_with_Multiple_Delimiter(string input)
-        //{
-        //    int totalResult = 0;
-        //    int variableWithNullValue = 0;
-        //    string[] separators = { ",", "\n", "#", "***", "[***]", "*", "!!", "r9r" };
-        //    string[] returnResult = input.Split(separators, StringSplitOptions.None);
+        public int Add_multiple_numbers_with_Multiple_Delimiter(string input)
+        {
+            int totalResult = 0;
+            int variableWithNullValue = 0;
+            string[] separators = { ",", "\n", "#", "***", "[***]", "*", "!!", "r9r" };
+            string[] returnResult = input.Split(separators, StringSplitOptions.None);
 
-        //    foreach (string result in returnResult)
-        //    {
-        //        bool newValue = int.TryParse(result, out variableWithNullValue);
-        //        if (!newValue)
-        //        {
-        //            throw new FormatException($"Invalid number: {result}");
-        //        }
-        //        totalResult += variableWithNullValue;
-        //    }
+            foreach (string result in returnResult)
+            {
+                bool newValue = int.TryParse(result, out variableWithNullValue);
+                if (!newValue)
+                {
+                    throw new FormatException($"Invalid number: {result}");
+                }
+                totalResult += variableWithNullValue;
+            }
 
-        //    return totalResult;
-        //}
-    }
+            return totalResult;
+            }
+        }
 }

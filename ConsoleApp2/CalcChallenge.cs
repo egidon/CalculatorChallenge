@@ -108,29 +108,29 @@ namespace ConsoleApp2
         }
 
         //// 5. Invalidate values greater than 1000
-        //public int Invalidate_Values_Above_1000(string input)
-        //{
-        //    int totalResult = 0;
-        //    int variableWithNullValue = 0;
-        //    string[] separators = { "," };
-        //    string[] returnResult = input.Split(separators, StringSplitOptions.None);
+        public int Invalidate_Values_Above_1000(string input)
+        {
+            int totalResult = 0;
+            int variableWithNullValue = 0;
+            string[] separators = { "," };
+            string[] returnResult = input.Split(separators, StringSplitOptions.None);
 
-        //    foreach (string result in returnResult)
-        //    {
-        //        bool newValue = int.TryParse(result, out variableWithNullValue);
-        //        if (!newValue)
-        //        {
-        //            throw new FormatException($"Invalid number: {result}");
-        //        }
+            foreach (string result in returnResult)
+            {
+                bool newValue = int.TryParse(result, out variableWithNullValue);
+                if (!newValue)
+                {
+                    throw new FormatException($"Invalid number: {result}");
+                }
 
-        //        if (variableWithNullValue <= 1000)
-        //        {
-        //            totalResult += variableWithNullValue;
-        //        }
-        //    }
+                if (variableWithNullValue <= 1000)
+                {
+                    totalResult += variableWithNullValue;
+                }
+            }
 
-        //    return totalResult;
-        //}
+            return totalResult;
+        }
 
         //// 6. Support one delimiter (e.g., # or ,)
         //public int Add_multiple_numbers_with_One_Delimiter(string input)

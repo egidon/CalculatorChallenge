@@ -81,31 +81,31 @@ namespace ConsoleApp2
         }
 
         //// 4. Deny negative numbers
-        //public int Deny_Negative_Numbers(string input)
-        //{
-        //    int totalResult = 0;
-        //    int variableWithNullValue = 0;
-        //    string[] separators = { ",", "\n" };
-        //    string[] returnResult = input.Split(separators, StringSplitOptions.None);
+        public int Deny_Negative_Numbers(string input)
+        {
+            int totalResult = 0;
+            int variableWithNullValue = 0;
+            string[] separators = { ",", "\n" };
+            string[] returnResult = input.Split(separators, StringSplitOptions.None);
 
-        //    foreach (string result in returnResult)
-        //    {
-        //        bool newValue = int.TryParse(result, out variableWithNullValue);
-        //        if (!newValue)
-        //        {
-        //            throw new FormatException($"Invalid number: {result}");
-        //        }
+            foreach (string result in returnResult)
+            {
+                bool newValue = int.TryParse(result, out variableWithNullValue);
+                if (!newValue)
+                {
+                    throw new FormatException($"Invalid number: {result}");
+                }
 
-        //        if (variableWithNullValue < 0)
-        //        {
-        //            throw new Exception($"Negative number found: {variableWithNullValue}");
-        //        }
+                if (variableWithNullValue < 0)
+                {
+                    throw new Exception($"Negative number found: {variableWithNullValue}");
+                }
 
-        //        totalResult += variableWithNullValue;
-        //    }
+                totalResult += variableWithNullValue;
+            }
 
-        //    return totalResult;
-        //}
+            return totalResult;
+        }
 
         //// 5. Invalidate values greater than 1000
         //public int Invalidate_Values_Above_1000(string input)

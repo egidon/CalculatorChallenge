@@ -39,25 +39,25 @@ namespace ConsoleApp2
         }
 
         //// 2. Remove maximum constraints for numbers
-        //public int Add_multiple_numbers(string input)
-        //{
-        //    int totalResult = 0;
-        //    int variableWithNullValue = 0;
-        //    string[] separators = { "," };
-        //    string[] returnResult = input.Split(separators, StringSplitOptions.None);
+        public int Add_multiple_numbers(string input)
+        {
+            int totalResult = 0;
+            int variableWithNullValue = 0;
+            string[] separators = { "," };
+            string[] returnResult = input.Split(separators, StringSplitOptions.None);
 
-        //    foreach (string result in returnResult)
-        //    {
-        //        bool newValue = int.TryParse(result, out variableWithNullValue);
-        //        if (!newValue)
-        //        {
-        //            throw new FormatException($"Invalid number: {result}");
-        //        }
-        //        totalResult += variableWithNullValue;
-        //    }
+            foreach (string result in returnResult)
+            {
+                bool newValue = int.TryParse(result, out variableWithNullValue);
+                if (!newValue)
+                {
+                    throw new FormatException($"Invalid number: {result}");
+                }
+                totalResult += variableWithNullValue;
+            }
 
-        //    return totalResult;
-        //}
+            return totalResult;
+        }
 
         //// 3. Support a new line character delimiter
         //public int Add_multiple_numbers_with_new_Delimiter(string input)
